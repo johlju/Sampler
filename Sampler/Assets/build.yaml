@@ -57,6 +57,8 @@ BuildWorkflow:
     - Pester_Tests_Stop_On_Fail
     - Pester_if_Code_Coverage_Under_Threshold
     - hqrmtest
+    # Used to parse the resulting file if needed (i.e for Codecov.io).
+    #- Parse_CodeCoverage
 
   publish:
     - Publish_release_to_GitHub
@@ -85,6 +87,7 @@ Pester: #Passthru, OutputFile, CodeCoverageOutputFile not supported
     - TestQuality
   Tag:
   CodeCoverageThreshold: 85 # Set to 0 to bypass
+  # CodeCoverageOutputFile: JaCoCo_coverage.xml
 
 DscTest:
   ExcludeTag:
