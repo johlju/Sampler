@@ -10,7 +10,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Added warning messages to all build task if the task couldn't be imported because of an invalid PSD1 file
--  `build.ps1` will now dynamically determine the build configuration if not specified via the `-BuildConfig` parameter
+- `build.ps1` will now dynamically determine the build configuration if not specified via the `-BuildConfig` parameter
+- Add variable to avoid expensive initialization of dotnet cli in the CI
+  pipeline. See the article [Stop wasting time during .NET Core builds](https://donovanbrown.com/post/Stop-wasting-time-during-NET-Core-builds).
 
 ## [0.100.0] - 2020-02-01
 
